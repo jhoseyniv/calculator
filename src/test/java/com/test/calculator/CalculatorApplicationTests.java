@@ -11,7 +11,10 @@ class CalculatorApplicationTests {
 
 	@Test
 	void contextLoads() {
-		assertEquals(5,calculator.sum(3,3));
+		assertEquals(6,calculator.sum(3,3));
+		assertEquals(5000,calculator.sum(3000,2000));
+		assertEquals(75,calculator.sum(74,1));
+		assertEquals(51,calculator.sum(51,0));
 	}
 
 }
