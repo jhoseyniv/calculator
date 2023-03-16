@@ -6,8 +6,8 @@ plugins {
 
 group = 'com.test'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '9'
-
+sourceCompatibility = 9
+targetCompatibility = 9
 repositories {
 	mavenCentral()
 }
