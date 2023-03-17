@@ -15,14 +15,14 @@ public class CalculatorTest {
 
     @Test
     public void testSum(){
-        assertEquals(5,calculator.sum(3,3));
+        assertEquals(5,calculator.sum(2,3));
     }
 
    @TestFactory
     Collection<DynamicTest> dynamicTestCollection(){
         return Arrays.asList(
                 DynamicTest.dynamicTest("1 test sum :",()-> assertEquals(6,calculator.sum(3,3))),
-                DynamicTest.dynamicTest("2 test sum :",()-> assertEquals(14,calculator.sum(13,3)))
+                DynamicTest.dynamicTest("2 test sum :",()-> assertEquals(14,calculator.sum(13,1)))
 
         );
     }
