@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CalculatorController {
+
     @Autowired
-    private Calculator calculator;
+    public Calculator calculator;
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello world!this is test";
+        return "Hello world!";
     }
 
     @GetMapping(path="/sum", produces = "application/json")

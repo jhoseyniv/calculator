@@ -18,12 +18,12 @@ public class CalculatorTest {
         assertEquals(5,calculator.sum(3,3));
     }
 
-//    @TestFactory
-//    Collection<DynamicTest> dynamicTestCollection(){
-//        return Arrays.asList(
-//                DynamicTest.dynamicTest("1 test sum :",()-> assertEquals(6,calculator.sum(3,3))),
-//                DynamicTest.dynamicTest("2 test sum :",()-> assertEquals(14,calculator.sum(13,3)))
-//
-//        );
-//    }
+   @TestFactory
+    Collection<DynamicTest> dynamicTestCollection(){
+        return Arrays.asList(
+                DynamicTest.dynamicTest("1 test sum :",()-> assertEquals(6,calculator.sum(3,3))),
+                DynamicTest.dynamicTest("2 test sum :",()-> assertEquals(14,calculator.sum(13,3)))
+
+        );
+    }
 }
