@@ -20,7 +20,9 @@ public class CalculatorController {
 
     @RequestMapping(path="/sum")
     String sum(@RequestParam("a") int a,@RequestParam("b") int b) {
-        return String.valueOf(calculator.sum(a, b));
+        long sumValue = calculator.sum(a, b);
+        return String.valueOf(sumValue);
+        //return "30";
     }
 
 }

@@ -23,7 +23,7 @@ public class CalculatorApplicationTests {
     @Autowired
     private MockMvc mvc;
 
-   @MockBean
+   @Autowired
     public Calculator calculator;
 
     private Calculator calculator2 = new Calculator();
@@ -51,7 +51,7 @@ public class CalculatorApplicationTests {
         mvc.perform(MockMvcRequestBuilders.get(uri).contentType(MediaType.ALL_VALUE))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("0")));
+                .andExpect(content().string(equalTo("30")));
     }
 
     @Test
