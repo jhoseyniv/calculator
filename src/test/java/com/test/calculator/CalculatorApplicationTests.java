@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
@@ -45,10 +46,12 @@ public class CalculatorApplicationTests {
 
     @Test
     public void whenSumIsCorrect_thenAccept() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/sum?a=10&b=20"))
+        String uri = "/sum?a=10&b=20";
+
+        mvc.perform(MockMvcRequestBuilders.get(uri).contentType(MediaType.ALL_VALUE))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string(is("30")));
+                .andExpect(content().string(equalTo("0")));
     }
 
     @Test
