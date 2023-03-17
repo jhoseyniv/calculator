@@ -18,8 +18,9 @@ public class CalculatorController {
         return "Hello World!";
     }
 
-    @GetMapping(path="/sum", produces = "application/json")
+    @RequestMapping(path="/sum")
     String sum(@RequestParam("a") Integer a,@RequestParam("b") Integer b) {
         return String.valueOf(calculator.sum(a, b));
     }
+
 }
