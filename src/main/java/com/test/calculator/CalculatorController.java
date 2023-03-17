@@ -15,7 +15,7 @@ public class CalculatorController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello world!";
+        return "Hello World!";
     }
 
     @GetMapping(path="/sum", produces = "application/json")
