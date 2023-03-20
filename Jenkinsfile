@@ -1,7 +1,7 @@
 pipeline {
 agent any
 stages {
-            stage('Initialize'){
+            stage("Initialize"){
                     def dockerHome = tool 'docker-latest'
                     env.PATH = "${dockerHome}/bin:${env.PATH}"
                 }
