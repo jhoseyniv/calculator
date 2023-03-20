@@ -19,7 +19,7 @@ stages {
                 }
             }
 
-            stage("Package") {
+            stage("Package to Jar") {
                 steps {
                         sh "./gradlew build"
                 }
