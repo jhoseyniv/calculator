@@ -1,10 +1,7 @@
 pipeline {
 agent any
 stages {
-            stage('Initialize'){
-                    def dockerHome = tool 'myDocker'
-                    env.PATH = "${Docker_Home}/bin:${env.PATH}"
-            }
+
             stage("Compile") {
                 steps {
                         sh "./gradlew compileJava"
