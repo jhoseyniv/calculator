@@ -25,10 +25,9 @@ stages {
                 }
             }
 
-            stage("Docker build") {
-                steps {
-                        sh "./docker build -t calculator ."
-                }
-            }
-        }
+//             stage("Docker build") {
+//                 steps {
+//                         sh "./docker build -t calculator ."
+//                   }
+//             }
 }
