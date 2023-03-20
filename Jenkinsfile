@@ -21,9 +21,13 @@ stages {
 
             stage("Package to Jar") {
                 steps {
-                        sh "./gradlew build -s"
+                        sh "./gradlew build"
                 }
             }
-
+            stage("Docker build") {
+                steps {
+                        sh "docker build -t calculator ."
+                }
+            }
         }
 }
