@@ -4,7 +4,7 @@ stages {
             stage('Initialize'){
                 steps{
                     def dockerHome = tool 'myDocker'
-                    env.PATH = "${dockerHome}/bin:${env.PATH}"
+                    env.PATH = "${Docker_Home}/bin:${env.PATH}"
                     }
             }
             stage("Compile") {
