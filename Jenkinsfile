@@ -25,4 +25,10 @@ stages {
                 }
             }
 
+//             stage("Docker build") {
+//                 steps {
+//                         sh "docker build -t leszko/calculator ."
+//                 }
+//             }
+        }
 }
