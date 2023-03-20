@@ -24,6 +24,10 @@ stages {
                         sh "./gradlew build"
                 }
             }
-
+            stage("Docker build") {
+                steps {
+                        sh "docker build -t calculator ."
+                }
+            }
         }
 }
