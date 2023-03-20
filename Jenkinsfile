@@ -20,7 +20,7 @@ stages {
             }
             stage("Package") {
                 steps {
-                        sh "./gradlew build"
+
                 }
             }
         }
