@@ -18,12 +18,10 @@ stages {
                         sh "./gradlew jacocoTestCoverageVerification"
                 }
             }
-
             stage("Package") {
                 steps {
                         sh "./gradlew build"
                 }
             }
-
         }
 }
