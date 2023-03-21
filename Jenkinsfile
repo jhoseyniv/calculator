@@ -26,7 +26,10 @@ stages {
             }
             stage("Docker build") {
                 steps {
-                        sh "docker build -t calculator ."
+
+                        script {
+                                  docker.build "-t calculator ."
+                                }
                 }
             }
         }
