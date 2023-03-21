@@ -28,7 +28,7 @@ stages {
                 steps {
 
                         script {
-                                  docker.build("calculator")
+                                  docker.build("calculator888")
                                 }
                 }
             }
