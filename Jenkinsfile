@@ -28,7 +28,7 @@ stages {
                 steps {
 
                         script {
-                                  docker.build "-t calculator ."
+                                  docker.build("calculator")
                                 }
                 }
             }
