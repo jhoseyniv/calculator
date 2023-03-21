@@ -26,7 +26,7 @@ stages {
             }
             stage("Docker build") {
                 steps {
-                        sudo "docker build -v /var/run/docker.sock:/var/run/docker.sock -t calculator ."
+                        sh "docker build -t calculator ."
                 }
             }
         }
